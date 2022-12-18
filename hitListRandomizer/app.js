@@ -6,23 +6,16 @@ const drives = document.querySelector('.drives');
 const absent = document.querySelector('.absent');
 const data = document.querySelector('.data');
 const lingering = document.querySelector('.lingering');
-const result1 = document.querySelector('.result1');
-const result2 = document.querySelector('.result2');
-const result3 = document.querySelector('.result3');
-const result4 = document.querySelector('.result4');
-const result5 = document.querySelector('.result5');
-const result6 = document.querySelector('.result6');
-const result7 = document.querySelector('.result7');
 
-
+const list = []
 
 generate.addEventListener('click', () => {
-  const list = []
+  
   if (pooh.checked) {
-    list.push('pooh')
+    list.push('Pooh')
   }
   if (drives.checked) {
-    list.push('drives')
+    list.push('Drives')
   }
   if (absent.checked) {
     list.push("Zexion", "Vexen", "Larxene", "Lexaeus", "Marluxia")
@@ -34,7 +27,17 @@ generate.addEventListener('click', () => {
     list.push("Lingering Will")
   }
   list.sort(() => (Math.random() > 0.5) ? 1 : -1)
-  return list;
 })
 
-console.log(list)
+const para = document.createElement('p')
+const result1 = document.createTextNode(list[0]);
+const result2 = document.createTextNode(list[1]);
+const result3 = document.createTextNode(list[2]);
+const result4 = document.createTextNode(list[3]);
+const result5 = document.createTextNode(list[4]);
+const result6 = document.createTextNode(list[5]);
+const result7 = document.createTextNode(list[6]);
+
+console.log(result1)
+
+
